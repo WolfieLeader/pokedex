@@ -8,7 +8,7 @@ const Container = ({ children }: { children: React.ReactNode }) => {
       <Background />
       <div className="relative h-svh specialMD:h-[calc(100svh-5rem)] z-10 m-0 specialMD:my-10 specialMD:mx-20 lg:mx-28 bg-zinc-900/85 rounded-none specialMD:rounded-3xl">
         <NavBar />
-        {children}
+        <main className="px-8 py-2">{children}</main>
       </div>
     </div>
   );
