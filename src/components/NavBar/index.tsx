@@ -21,7 +21,7 @@ const NavBar = () => {
   }, [toggleMenu, windowWidth]);
 
   return (
-    <header className="z-30 py-3 w-full bg-primary-900/85 text-zinc-100 rounded-none specialMD:rounded-t-3xl flex flex-wrap items-center justify-between">
+    <header className="z-30 py-3 w-full bg-primary-900/85 text-zinc-100 rounded-none min-[770px]:rounded-t-3xl flex flex-wrap items-center justify-between">
       <NavLink to="/" className="ml-10">
         <PokemonIcon className="h-12" />
       </NavLink>
