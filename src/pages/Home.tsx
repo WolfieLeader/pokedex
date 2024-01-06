@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
-import Pikachu from "../images/Pikachu.png";
 
-const HomePage = () => {
-  return (
-    <>
-      <Content />
-      <img src={Pikachu} alt="Pikachu" className="absolute w-[26rem] right-0 top-36 translate-x-10 opacity-75" />
-    </>
-  );
+const Home = () => {
+  return <Content />;
 };
 
 const Content = () => {
@@ -44,4 +38,4 @@ const Buttons = () => {
   );
 };
 
-export default HomePage;
+export default Home;

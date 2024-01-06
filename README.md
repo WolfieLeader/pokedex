@@ -1,33 +1,30 @@
-# Pokédex
+# React + TypeScript + Vite
 
-This is a Pokédex application that displays information about different Pokémon species. It allows users to search for specific Pokémon, view their details, and explore their abilities, moves, and stats.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- Search: Users can search for Pokémon by name or ID.
-- Details: Users can view detailed information about each Pokémon, including their type, abilities, moves, and stats.
-- Favorites: Users can mark Pokémon as favorites for quick access.
-- Filtering: Users can filter Pokémon by type, region, or other criteria.
-- Pagination: Pokémon are displayed in pages to improve performance and user experience.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Usage
+## Expanding the ESLint configuration
 
-1. Open the application in your web browser.
-2. Use the search bar to find Pokémon by name or ID.
-3. Click on a Pokémon to view its details.
-4. Explore the different tabs to learn more about the Pokémon's abilities, moves, and stats.
-5. Mark your favorite Pokémon by clicking the heart icon.
-6. Use the filters to narrow down your search or explore Pokémon from specific regions.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Contributing
+- Configure the top-level `parserOptions` property like this:
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgements
-
-- [PokéAPI](https://pokeapi.co/): The Pokémon API used to fetch Pokémon data.
-- [Pokédex](https://www.pokemon.com/us/pokedex/): The official Pokémon website for reference.
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
